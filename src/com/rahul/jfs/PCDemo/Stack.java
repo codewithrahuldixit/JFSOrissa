@@ -1,10 +1,10 @@
 package com.rahul.jfs.PCDemo;
 
-public class Stack {
+public class Stack <T>{
 	
-	int [] buffer;
+	T [] buffer;
 	int top;
-	public Stack(int[] buffer) {
+	public Stack(T[] buffer) {
 		super();
 		this.buffer = buffer;
 		top=-1;
@@ -15,8 +15,15 @@ public class Stack {
 	public boolean isFull() {
 		return top==buffer.length-1;
 	}
+	//Cannot make a static reference to the non-static type T
 	
-	synchronized public int push(int item) {
+	//From static reference we access only static data
+	//we can create the static generic method in Generic class 
+	//with different generisity
+	public static  <T1> void show(T1 item) {
+		System.out.println(item);
+	}
+	synchronized public int push(T item) {
 		if(isFull())
 			try {
 				wait();
@@ -31,8 +38,8 @@ public class Stack {
 			return top;
 		
 	}
-	synchronized public int pop(){
-		int item=Integer.MIN_VALUE;
+	synchronized public T pop(){
+		T item=null;
 		if(isEmpty())
 			try {
 				wait();
