@@ -9,6 +9,8 @@ public class TreeSetDemo2{
 		TreeSet<Circle> t1 = new TreeSet<Circle>();
 		t1.add(new Circle(4));
 		t1.add(new Circle(5));
+		t1.add(new Circle(5));
+		t1.add(new Circle(3));
 		System.out.println(t1);
 		//When we want Customized Sorting without touching the class
 		//Comparator
