@@ -2,28 +2,27 @@ package com.rahul.jfs.coupling;
 
 public class Drawing {
 
-	private Circle circle;
-	
+	private Shape shape;
 
-	public Drawing(Circle circle) {
+	public Drawing(Shape shape) {
 		super();
-		this.circle = circle;
+		this.shape = shape;
 	}
 
-	public Circle getCircle() {
-		return circle;
+	public Shape getShape() {
+		return shape;
 	}
 
-	public void setCircle(Circle circle) {
-		this.circle = circle;
+	public void setShape(Shape shape) {
+		this.shape = shape;
 	}
 
 	@Override
 	public String toString() {
-		return "Drawing [circle=" + circle + "]";
+		return "Drawing [shape=" + shape + "]";
 	}
+	
 	public void draw() {
-		System.out.println(circle);
+		System.out.println(shape);
 	}
-
 }

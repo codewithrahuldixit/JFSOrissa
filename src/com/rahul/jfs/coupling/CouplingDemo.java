@@ -3,8 +3,11 @@ package com.rahul.jfs.coupling;
 public class CouplingDemo {
 
 	public static void main(String[] args) {
-		Circle circle = new Circle(10);
-		Drawing d1= new Drawing(circle);
+	
+		//Circle shape = new Circle(10);
+		Rectangle shape = new Rectangle();
+		//Square shape = new Square();
+		Drawing d1 = new Drawing(shape);
 		d1.draw();
 	}
 }
